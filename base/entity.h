@@ -1,5 +1,5 @@
-#ifndef ENTITY_H
-#define ENTITY_H
+#ifndef ENTITY_H_
+#define ENTITY_H_
 
 #include <string>
 #include <vector>
