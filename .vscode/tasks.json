@@ -9,11 +9,12 @@
 				"-fdiagnostics-color=always",
 				"-g",
 				
+				"${workspaceFolder}\\classes\\*.cpp",
+				"${workspaceFolder}\\headers\\*.h",
 				"${workspaceFolder}\\*.cpp",
-                "${workspaceFolder}\\*.h",
 				
 				"-o",
-				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+				"${fileDirname}\\spacefight.exe"
 			],
 			"options": {
 				"cwd": "${fileDirname}"

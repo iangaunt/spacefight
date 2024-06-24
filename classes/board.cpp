@@ -1,4 +1,4 @@
-#include "base/board.h"
+#include "../headers/board.h"
 
 #include <cstdlib>
 #include <iostream>
@@ -52,7 +52,7 @@ void Board::print_board() {
  */
 void Board::generate_board() {
     vector<vector<string>> lines;
-    const string dot = ".";
+    const string dot = " ";
 
     for (int i = 0; i < length; i++) {
         vector<string> c;

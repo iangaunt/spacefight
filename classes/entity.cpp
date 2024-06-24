@@ -1,4 +1,4 @@
-#include "base/entity.h"
+#include "../headers/entity.h"
 
 #include <string>
 #include <vector>
@@ -62,7 +62,8 @@ Entity::Entity(int xh, int yh, int vxh, int vyh, string iconh) {
  */
 void Entity::move(vector<vector<string>>& board) {
     if (is_valid_position(x + vx, y + vy, board)) {
-        move_to(x + vx, y + vy);
+        board[x][y] = " ";
+        board[x + vx][y + vy] = icon;
 
         x += vx;
         y += vy;
@@ -70,7 +71,9 @@ void Entity::move(vector<vector<string>>& board) {
 }
 
 /**
- * @brief Places the entity on a new (x, y) position.
+ * @brief Places the entity on a new (x, y) position. 
+ * This is NOT a fully safe call and the `move()` method should
+ * be used instead if the position may be out of bounds.
  * 
  * @param xh The new x coordinate.
  * @param yh The new y coordinate.

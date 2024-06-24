@@ -14,6 +14,7 @@ class Entity {
         string icon = " ";
 
         Entity(int xh, int yh, int vxh, int vyhm, string icon);
+        
         void move(vector<vector<string>>& board);
         void move_to(int x, int y);
 
